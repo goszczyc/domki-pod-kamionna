@@ -1,0 +1,60 @@
+.title-text {
+  padding-top: 4rem;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  .breadcrumbs {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 11.8rem;
+    letter-spacing: 3px;
+    font-weight: 500;
+
+    a {
+      transition: color $transition-regular;
+
+      &:hover,
+      &:focus {
+        color: $text-clr-secondary;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+
+    &--bar {
+      &::before {
+        @include pseudo;
+        bottom: 0;
+        left: 0;
+        width: 13.6rem;
+        height: 3px;
+        background-color: #428301;
+      }
+    }
+    h2 {
+      @include scale-fontsize(6.6rem, 0.3);
+      font-weight: 600;
+      margin-bottom: 0.6em;
+    }
+    h1,
+    &--big h2
+    {
+      color: #3a3636;
+      @include scale-fontsize(14.6rem, 0.5);
+      margin-bottom: 0.8em;
+    }
+    &--lh-1 h2{
+      line-height: 1;
+    }
+  }
+  &__text {
+    margin-bottom: 6rem;
+    p {
+      font-size: 2.2rem;
+      line-height: 1.6;
+    }
+  }
+}

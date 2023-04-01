@@ -1,0 +1,67 @@
+.comments-section {
+  position: relative;
+  margin-bottom: 15rem;
+  min-height: 44vw;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // padding-bottom: 44%;
+    height: 100%;
+    overflow: hidden;
+    &::before {
+      @include pseudo;
+      inset: 0;
+      background-color: rgba($color: #000000, $alpha: 0.6);
+      z-index: 2;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 150%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding-top: 10vw;
+    z-index: 3;
+
+    .comments-section__text {
+      margin-bottom: 2rem;
+      h2 {
+        @include scale-fontsize(2.8rem, 0.2);
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 1.5em;
+      }
+      p {
+        @include scale-fontsize(1.8rem, 0.2);
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 2em
+      }
+    }
+    .comments-section__comment {
+      display: none;
+      padding-bottom: 4rem;
+      &-author {
+        @include scale-fontsize(2.2rem, 0.2);
+        color: #fff;
+        margin-bottom: 2.5em;
+      }
+      &-content p {
+        @include scale-fontsize(8rem);
+        font-weight: 600;
+        line-height: 1;
+        color: #c4d720;
+      }
+    }
+  }
+}

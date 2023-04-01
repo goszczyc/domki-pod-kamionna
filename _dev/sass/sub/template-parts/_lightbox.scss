@@ -1,0 +1,78 @@
+.lightbox-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding: 2rem;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.7);
+  z-index: 1101;
+  isolation: isolate;
+
+  .lightbox-gallery {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: #fff;
+    padding: 2rem;
+
+    &__btn {
+      position: absolute;
+      top: 50%;
+      font-size: 5rem;
+      padding: 0.5rem;
+      color: #fff;
+      background: none;
+      border: none;
+      z-index: 2;
+      transform: translateY(-50%);
+      cursor: pointer;
+
+      &--prev {
+        left: 30px;
+      }
+
+      &--next {
+        right: 30px;
+      }
+    }
+    &__close {
+      position: absolute;
+      top: 0.2rem;
+      right: 0.2rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        @include pseudo;
+        top: 50%;
+        left: 50%;
+        height: 2px;
+        width: 100%;
+        background-color: #000;
+        transform: translate(-50%,-50%) rotate(45deg);
+      }
+      &::after {
+        transform: translate(-50%,-50%) rotate(-45deg);
+      }
+    }
+
+    &__image {
+      display: none;
+      object-fit: contain;
+      max-height: 80vh;
+      max-width: calc(100vw - 80px);
+
+      &--current {
+        display: unset;
+      }
+    }
+  }
+}

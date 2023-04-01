@@ -1,0 +1,51 @@
+.attractions {
+  margin-block: 4rem;
+  margin-inline: auto;
+
+  &__attraction {
+    margin: 0;
+    margin-bottom: 10rem;
+    
+    .attractions__attraction-thumbnail {
+      margin-bottom: 4rem;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .attractions__attraction-type {
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 2.5rem;
+    }
+    .attractions__attraction-keywords {
+      color: $text-clr-secondary;
+      font-size: 1.8rem;
+      margin-bottom: 3.2rem;
+    }
+    .attractions__attraction-icon {
+      margin-bottom: 5rem;
+
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: 12rem;
+      }
+    }
+    .attractions__attraction-excerpt {
+      font-size: 2.2rem;
+      line-height: 1.6;
+      margin-bottom: 5rem;
+      p {
+        font-size: inherit;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+    }
+  }
+}

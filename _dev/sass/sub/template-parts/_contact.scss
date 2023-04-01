@@ -1,0 +1,32 @@
+.contact {
+  &__data {
+    margin-bottom: 6rem;
+  }
+  &__heading {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+  }
+  &__text {
+    display: inline-block;
+    font-size: 2.4rem;
+    margin-bottom: 0.6rem;
+
+    &--email {
+      color: $text-clr-secondary;
+    }
+  }
+  &__map {
+    position: relative;
+    padding-bottom: 33.3%;
+    margin-block: 10rem;
+
+    #map {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

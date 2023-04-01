@@ -1,0 +1,31 @@
+.video {
+  margin-bottom: 7rem;
+  &__heading {
+    @include scale-fontsize(4rem);
+    font-weight: 600;
+    margin-bottom: 6.5rem;
+  }
+
+  &__video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 42%;
+
+    video,
+    iframe,
+    object,
+    embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__video {
+      padding-bottom: 56.25%;
+    }
+  }
+}

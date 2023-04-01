@@ -1,0 +1,106 @@
+.reservation-bar {
+  display: flex;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2.5rem 3.3rem;
+    border-right: 1px solid #d9d9de;
+    background-color: #fff;
+    text-align: center;
+
+    &:last-child {
+      border: none;
+    }
+    .error-msg {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      padding-inline: 10px;
+      margin: 0;
+      text-align: center;
+      font-size: 1.2rem;
+      color: red;
+    }
+  }
+
+  &__heading {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  &__text {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.6;
+    text-align: center;
+
+    &--date {
+      border: none;
+      min-width: 28rem;
+      outline: none;
+    }
+  }
+
+  &__guests {
+    display: flex;
+    align-items: center;
+
+    .reservation-bar__guests-btn {
+      position: relative;
+      background: none;
+      border: none;
+      color: $text-clr-primary;
+      cursor: pointer;
+    }
+    .reservation-bar__guests-number {
+      border: none;
+      text-align: center;
+      background: none;
+      width: 1ch;
+      margin-inline: 1rem;
+      color: $text-clr-primary;
+
+      // hide arrows
+      -moz-appearance: textfield;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+    &__group {
+      width: 50%;
+      border: none;
+      &:nth-child(odd) {
+        border-right: 1px solid #d9d9de;
+      }
+      &:nth-child(-n + 2) {
+        border-bottom: 1px solid #d9d9de;
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    &__group {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #d9d9de;
+      padding: 1.5rem 1rem;
+
+      &:nth-child(odd) {
+        border-right: none;
+      }
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+}

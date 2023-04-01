@@ -1,0 +1,27 @@
+.privacy-policy {
+  h1 {
+    @include scale-fontsize(4.5rem);
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+  h2 {
+    @include scale-fontsize(3.6rem);
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+  h3 {
+    @include scale-fontsize(2.6rem);
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+  ol {
+    padding-left: 25px;
+  }
+  li,
+  p {
+    @include scale-fontsize(1.8rem);
+  }
+  p {
+    margin-bottom: 1em;
+  }
+}

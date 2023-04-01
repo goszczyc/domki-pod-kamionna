@@ -1,0 +1,24 @@
+.images-slider-container {
+  width: 133vw;
+  margin-inline: auto;
+  margin-bottom: 10rem;
+
+  .images-slider__image {
+    padding-inline: 2rem;
+    overflow: hidden;
+    height: inherit;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  @media (max-width: 576px) {
+    width: 180vw;
+  }
+}
+
+.slick-track {
+  display: flex !important;
+}

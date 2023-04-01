@@ -1,0 +1,32 @@
+/** COLORS **/
+$white: #fff;
+$black: #000;
+$black-hover: hsl(0, 0%, 35%);
+$body-bg: #fff;
+
+$text-clr-primary: #3a3636;
+$text-clr-secondary: #428301;
+
+$clr-primary: #051842;
+$clr-secondary: #00cc88;
+$clr-tertiary: #e5e5e5;
+
+/** DECORATIONS **/
+
+$transition-regular: 300ms;
+$transition-slow: 600ms;
+$transition-fast: 150ms;
+$transition-bg: background $transition-regular;
+
+/** FONTS **/
+$font-primary: 'League Spartan', sans-serif;
+$font-secondary: 'League Spartan', sans-serif;
+
+/** RESPONSIVE BREAKPOINTS **/
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1500px,
+);

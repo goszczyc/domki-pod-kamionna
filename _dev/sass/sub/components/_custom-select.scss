@@ -1,0 +1,62 @@
+.custom-select {
+  position: relative;
+  min-width: 22rem;
+  z-index: 10;
+  
+  &__options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    
+    &--active {
+      display: block;
+    }
+    .custom-select__option {
+      display: block;
+      padding-inline: 30px;
+      cursor: pointer;
+      width: 100%;
+      border: 1px solid rgb(200,200,200);
+      color: $text-clr-primary;
+      &:active,
+      &:hover {
+        color: #fff;
+        background-color: $text-clr-secondary;
+      }
+    }
+  }
+
+  &__selected {
+    cursor: pointer;
+    padding-inline: 30px;
+    border: 1px solid transparent;
+    background: none;
+    width: 100%;
+    color: $text-clr-primary;
+
+    &:hover,
+    &:active {
+      background-color: rgb(245, 245, 245);
+    }
+    &::before {
+      @include pseudo;
+      top: 50%;
+      right: 10px;
+      width: 8px;
+      height: 8px;
+      border-bottom: 2px solid $text-clr-primary;
+      border-right: 2px solid $text-clr-primary;
+      transform: translateY(-85%) rotate(45deg);
+    }
+    &--active {
+      border-color: $text-clr-secondary;
+
+      &::before {
+        transform: translateY(-50%) rotate(225deg);
+      }
+    }
+  }
+}

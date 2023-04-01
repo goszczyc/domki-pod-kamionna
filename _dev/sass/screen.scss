@@ -1,0 +1,209 @@
+@import "sub/fonts";
+@import "sub/mixins";
+@import "sub/variables";
+@import "sub/normalize";
+@import "sub/universal";
+@import "sub/layout";
+@import "sub/header";
+@import "sub/footer";
+
+// Template Parts
+@import "sub/template-parts/banner";
+@import "sub/template-parts/attractions-icons";
+@import "sub/template-parts/attractions";
+@import "sub/template-parts/houses";
+@import "sub/template-parts/house";
+@import "sub/template-parts/contact";
+@import "sub/template-parts/icons";
+@import "sub/template-parts/comments-section";
+@import "sub/template-parts/privacy-policy";
+@import "sub/template-parts/lightbox";
+
+//COMPONENTS
+@import "sub/components/title-text";
+@import "sub/components/text-image";
+@import "sub/components/contact-form";
+@import "sub/components/image";
+@import "sub/components/images-slider";
+@import "sub/components/reservation-bar";
+@import "sub/components/custom-select";
+@import "sub/components/video";
+@import "sub/components/render";
+
+//PLUGINS
+@import "sub/slick/slick.scss";
+
+// Cookies
+@import "sub/cookies/divante.cookies";
+
+.reservation-bar__group.disabled{
+    position: relative;
+    &:active{
+        pointer-events: none;
+    }
+    &::after{
+        content: '';
+        background: #fff;
+        opacity: 0.65;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        
+    }
+    &:hover::after{
+        pointer-events: all;
+        content: "Prosimy najpierw wybrać domek";
+        color: #333;
+        font-size: 2.2rem;
+        padding: 15px;
+        opacity: 1;
+        box-sizing: border-box;
+        cursor: not-allowed;
+    }
+}
+
+
+
+.loader {
+  display: block;
+    color: green;
+    font-size: 12px;
+    margin: 100px auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-animation: load4 1.3s infinite linear;
+    animation: load4 1.3s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  @-webkit-keyframes load4 {
+    0%,
+    100% {
+      box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+      box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+      box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+      box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+  }
+  @keyframes load4 {
+    0%,
+    100% {
+      box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+      box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+      box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+      box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+  }
+
+  .modal{
+    display: none;
+    z-index: 1000;
+    &.show{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($color: #333, $alpha: 0.5)
+    }
+    &__icon svg{
+      width: 50px;
+      height: 50px;
+      fill:  $text-clr-secondary;
+    }
+    &__title{
+      font-size: 3rem;
+      color: $text-clr-secondary;
+      margin: 2rem 0;
+    }
+    &__text{
+      font-size: 2.2rem;;
+      margin-bottom: 2rem;
+    }
+    &__content{
+      background: #fff;
+      padding: 40px;
+      text-align: center;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: rgba($color: #333, $alpha: 0.1);
+      @media(max-width: 991px){
+        padding: 15px;
+        margin: 10px;
+        max-width: calc(100% - 20px);
+      }
+      & .info{
+        &__success, &__error{
+          display: none;
+        }
+      }
+      &.success{
+        & .info{
+          &__success{
+            display: block;
+          }
+        }
+      }
+      &.error{
+        & .info{
+          &__error{
+            display: block;
+          }
+        }
+      }
+    }
+  }

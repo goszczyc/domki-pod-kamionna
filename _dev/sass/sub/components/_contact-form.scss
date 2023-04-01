@@ -1,0 +1,120 @@
+.contact-form {
+  position: relative;
+
+  &__group {
+    margin-bottom: 2.5rem;
+    &--submit {
+      display: flex;
+      justify-content: flex-end;
+      position: unset;
+
+      .wpcf7-spinner {
+        position: absolute;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 0;
+        margin: 0;
+        opacity: 1;
+      }
+    }
+    .wpcf7-form-control-wrap {
+      position: unset;
+    }
+    .wpcf7-not-valid-tip,
+    .error-msg {
+      position: absolute;
+      top: 100%;
+      font-size: 1.2rem;
+      margin-top: 5px;
+      color: red;
+    }
+  }
+
+  &__input {
+    font-size: 2rem;
+    line-height: 1.2;
+    color: #000;
+    width: 100%;
+    padding: 1rem 1.2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid $text-clr-secondary;
+    outline-color: $text-clr-secondary;
+
+    &::placeholder {
+      color: #b9b9b9;
+    }
+
+    &--message {
+      resize: vertical;
+      min-height: 4.9em;
+      height: calc(4.9em + 2rem);
+    }
+  }
+
+  &__acceptance {
+    display: none;
+    
+    & ~ span {
+      position: relative;
+      font-size: 1.2rem;
+      line-height: 1.5;
+      text-align: justify;
+      padding-left: 2.2em;
+      cursor: pointer;
+
+      &::before {
+        @include pseudo;
+        top: 0;
+        left: 0;
+        width: 1.5em;
+        height: 1.5em;
+        border: 1px solid #000;
+        transform: translateY(-0.333em);
+      }
+
+      &::after {
+        @include pseudo;
+        top: 0;
+        left: 0.75em;
+        width: .8333em;
+        height: 0.4833em;
+        border-bottom: 0.25em solid;
+        border-left: 0.25em solid;
+        border-color: transparent;
+        transform: translate(-50%, 10%) rotate(-45deg);
+      }
+    }
+    &:checked ~ span {
+      &::before {
+        background-color: $text-clr-secondary;
+      }
+      &::after {
+        border-color: #fff;
+      }
+    }
+  }
+
+  .wpcf7 form .wpcf7-response-output {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+
+  .wpcf7 form.sent .wpcf7-response-output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+  }
+}
+
